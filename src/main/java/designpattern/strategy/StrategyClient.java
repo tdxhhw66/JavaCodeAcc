@@ -1,5 +1,9 @@
 package designpattern.strategy;
 
+import designpattern.strategy.service.ConcreteStrategyA;
+import designpattern.strategy.service.ConcreteStrategyB;
+import designpattern.strategy.service.ConcreteStrategyC;
+
 /**
  * 客户端使用策略
  * 
@@ -7,17 +11,18 @@ package designpattern.strategy;
  *
  */
 public class StrategyClient {
-    public static void main(String[] args) {
-	Context context;
+	public static void main(String[] args) {
+		Context context;
 
-	context = new Context(new ConcreteStrategyA());
-	context.contextInterface();
+//		context = new Context("A");
+		context = new Context(new ConcreteStrategyA());
+		context.contextInterface();
+		
+		context = new Context(new ConcreteStrategyB());
+		context.contextInterface();
+		
+		context = new Context(new ConcreteStrategyC());
+		context.contextInterface();
 
-	context = new Context(new ConcreteStrategyB());
-	context.contextInterface();
-
-	context = new Context(new ConcreteStrategyC());
-	context.contextInterface();
-
-    }
+	}
 }

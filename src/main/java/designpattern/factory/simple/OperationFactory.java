@@ -7,20 +7,20 @@ package designpattern.factory.simple;
  *
  */
 public class OperationFactory {
-    public static Operation createOperation(char operator) {
+    public static Operation createOperation(String operator) {
 	Operation operation = null;
 
 	switch (operator) {
-	case '+':
+	case "+":
 	    operation = new OperationAdd();
 	    break;
-	case '-':
+	case "-":
 	    operation = new OperationSub();
 	    break;
-	case '*':
+	case "*":
 	    operation = new OperationMul();
 	    break;
-	case '/':
+	case "/":
 	    operation = new OperationDiv();
 	    break;
 	default:

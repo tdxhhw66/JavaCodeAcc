@@ -17,5 +17,7 @@ public class Program {
 
 		d = String.valueOf(Operation.getResult(Double.parseDouble(a), Double.parseDouble(c), b));
 		System.out.println("结果是：" + d);
+		sc.close();
+		
 	}
 }
