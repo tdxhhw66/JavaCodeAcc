@@ -9,13 +9,12 @@ import designpattern.factory.simple.Operation;
  *
  */
 public class Client {
-    public static void main(String[] args) throws InstantiationException,
-	    IllegalAccessException {
-	Operation operation = OperationFactory.createOperation("/");
+	public static void main(String[] args) throws InstantiationException, IllegalAccessException {
+		Operation operation = OperationFactory.createOperation("/");
 
-	operation.numberA = 7;
-	operation.numberB = 8;
+		operation.numberA = 7;
+		operation.numberB = 8;
 
-	System.out.println(operation.result());
-    }
+		System.out.println(operation.result());
+	}
 }

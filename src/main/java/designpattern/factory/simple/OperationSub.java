@@ -8,9 +8,9 @@ package designpattern.factory.simple;
  */
 public class OperationSub extends Operation {
 
-    @Override
-    public double result() {
-	return numberA - numberB;
-    }
+	@Override
+	public double result() {
+		return numberA - numberB;
+	}
 
 }

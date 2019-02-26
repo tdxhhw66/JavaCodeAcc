@@ -9,29 +9,29 @@ import java.io.Serializable;
  *
  */
 public class WorkExperience implements Serializable {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    private String workDate;
-    private String workCompany;
+	private String workDate;
+	private String workCompany;
 
-    public String getWorkDate() {
-	return workDate;
-    }
+	public String getWorkDate() {
+		return workDate;
+	}
 
-    public WorkExperience setWorkDate(String workDate) {
-	this.workDate = workDate;
+	public WorkExperience setWorkDate(String workDate) {
+		this.workDate = workDate;
 
-	return this;
-    }
+		return this;
+	}
 
-    public String getWorkCompany() {
-	return workCompany;
-    }
+	public String getWorkCompany() {
+		return workCompany;
+	}
 
-    public WorkExperience setWorkCompany(String workCompany) {
-	this.workCompany = workCompany;
+	public WorkExperience setWorkCompany(String workCompany) {
+		this.workCompany = workCompany;
 
-	return this;
-    }
+		return this;
+	}
 
 }

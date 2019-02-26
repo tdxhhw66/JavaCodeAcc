@@ -16,29 +16,29 @@ import designpattern.factory.simple.OperationSub;
  *
  */
 public class OperationFactory {
-    private static Map<String, Class<?>> allOperationMaps = new HashMap<String, Class<?>>();
 
-    public static void fillMap() {
-	allOperationMaps.put("+", OperationAdd.class);
-	allOperationMaps.put("-", OperationSub.class);
-	allOperationMaps.put("*", OperationMul.class);
-	allOperationMaps.put("/", OperationDiv.class);
-    }
+	private static Map<String, Class<?>> allOperationMaps = new HashMap<String, Class<?>>();
 
-    public static Operation createOperation(String operator)
-	    throws InstantiationException, IllegalAccessException {
-	Operation operation;
-
-	fillMap();
-	Class<?> operationClass = allOperationMaps.get(operator);
-
-	if (operationClass == null) {
-	    throw new RuntimeException("unsupported operation");
+	public static void fillMap() {
+		allOperationMaps.put("+", OperationAdd.class);
+		allOperationMaps.put("-", OperationSub.class);
+		allOperationMaps.put("*", OperationMul.class);
+		allOperationMaps.put("/", OperationDiv.class);
 	}
 
-	operation = (Operation) operationClass.newInstance();
+	public static Operation createOperation(String operator) throws InstantiationException, IllegalAccessException {
+		Operation operation;
 
-	return operation;
-    }
+		fillMap();
+		Class<?> operationClass = allOperationMaps.get(operator);
+
+		if (operationClass == null) {
+			throw new RuntimeException("unsupported operation");
+		}
+
+		operation = (Operation) operationClass.newInstance();
+
+		return operation;
+	}
 
 }
