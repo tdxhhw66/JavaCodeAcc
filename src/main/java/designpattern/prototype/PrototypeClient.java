@@ -1,7 +1,6 @@
 package designpattern.prototype;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 
 import org.apache.commons.beanutils.BeanUtils;
 
@@ -48,15 +47,6 @@ public class PrototypeClient {
 		aResume.setName("大鸟 ").setGender("男 ").setAge(25);
 		aResume.setWorkExperience("1999-2002, ", "XX公司");
 
-		try {
-			Resume cloneBean = (Resume) BeanUtils.cloneBean(aResume);
-			
-			// cloneBean.setName("sdfsdf");
-			cloneBean.display();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		Resume bResume = (Resume) aResume.deepClone();
 		bResume.setWorkExperience("1999-2002, ", "YY公司");
 
